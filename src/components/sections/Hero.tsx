@@ -149,7 +149,7 @@ export default function Hero() {
 
           {/* ── RIGHT: Photo placeholder ── */}
           <div
-            className="relative hidden md:block"
+            className="relative w-56 mx-auto md:w-full"
             style={{ animation: "fadeIn 0.8s ease 0.4s both" }}
           >
             {/* Offset decorative frame */}

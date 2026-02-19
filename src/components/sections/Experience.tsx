@@ -13,7 +13,7 @@ export default function Experience() {
         <SectionReveal delay={100}>
           <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] text-[var(--ink)] font-semibold mt-4 mb-16">
             Where I have{" "}
-            <span className="text-[var(--accent)]">shipped work.</span>
+            <span className="text-[var(--accent)]">contributed.</span>
           </h2>
         </SectionReveal>
 

@@ -100,14 +100,17 @@ export default function Navbar() {
             <ThemeToggle />
           </nav>
 
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden text-[var(--ink)] p-1"
-            onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
-          >
-            {menuOpen ? <X size={22} /> : <Menu size={22} />}
-          </button>
+          {/* Mobile controls: theme toggle + menu button */}
+          <div className="md:hidden flex items-center gap-2">
+            <ThemeToggle />
+            <button
+              className="text-[var(--ink)] p-1"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
       </header>
 
@@ -117,9 +120,6 @@ export default function Navbar() {
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
-        <div className="absolute top-5 right-8">
-          <ThemeToggle />
-        </div>
         <nav className="flex flex-col gap-6">
           {navItems.map((item, i) => (
             <a
