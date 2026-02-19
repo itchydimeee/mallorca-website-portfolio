@@ -9,7 +9,7 @@ const stats = [
 
 export default function About() {
   return (
-    <section id="about" className="py-28 bg-(--bg)">
+    <section id="about" className="py-28 bg-[var(--bg)]">
       <div className="max-w-300 mx-auto px-6 md:px-10">
         {/* Section label */}
         <SectionReveal>
@@ -20,14 +20,14 @@ export default function About() {
           {/* Left: Bio */}
           <div>
             <SectionReveal delay={100}>
-              <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] text-(--ink) font-semibold leading-tight mb-8">
+              <h2 className="font-display text-[clamp(1.8rem,4vw,3rem)] text-[var(--ink)] font-semibold leading-tight mb-8">
                 Thoughtful interfaces, <br />
-                <span className="text-(--accent)">built from the ground up.</span>
+                <span className="text-[var(--accent)]">built from the ground up.</span>
               </h2>
             </SectionReveal>
 
             <SectionReveal delay={200}>
-              <div className="space-y-4 font-mono text-sm text-(--ink-muted) leading-loose max-w-lg">
+              <div className="space-y-4 font-mono text-sm text-[var(--ink-muted)] leading-loose max-w-lg">
                 <p>
                   I am a frontend software engineer from Iloilo City, Philippines,
                   passionate about crafting web interfaces that are both visually precise
@@ -48,11 +48,10 @@ export default function About() {
 
             <SectionReveal delay={300}>
               <div className="mt-8 flex items-center gap-3">
-                <span className="w-8 h-px bg-(--accent-pop)" />
-                <p className="text-xs font-mono text-(--ink-muted)">
+                <span className="w-8 h-px bg-[var(--accent-pop)]" />
+                <p className="text-xs font-mono text-[var(--ink-muted)]">
                   {education[0].degree} ·{" "}
-                  <span className="text-(--accent)">{education[0].school}</span>
-                  {" "}— {education[0].period}
+                  <span className="text-[var(--accent)]">{education[0].school}</span>
                 </p>
               </div>
             </SectionReveal>
@@ -62,17 +61,13 @@ export default function About() {
           <div className="flex flex-col md:border-l border-[var(--border)]">
             {stats.map((stat, i) => (
               <SectionReveal key={stat.label} delay={150 + i * 100}>
-                <div
-                  className={`group relative px-8 py-7 overflow-hidden ${i < stats.length - 1 ? "border-b border-[var(--border)]" : ""}`}
-                >
-                  {/* Subtle fill on hover */}
-                  <div className="absolute inset-0 bg-(--accent) opacity-0 group-hover:opacity-[0.04] transition-opacity duration-300" />
-                  {/* Left accent bar */}
-                  <div className="absolute left-0 top-0 bottom-0 w-0 bg-(--accent-pop) group-hover:w-0.5 transition-all duration-300" />
-                  <p className="font-display text-[clamp(3rem,6vw,5rem)] font-bold text-(--ink) leading-none tracking-tight group-hover:text-(--accent) transition-colors duration-300">
+                <div className={`group relative px-8 py-8 overflow-hidden${i < stats.length - 1 ? " border-b border-[var(--border)]" : ""}` }>
+                  <div className="absolute inset-0 bg-[var(--accent)] opacity-0 group-hover:opacity-[0.04] transition-opacity duration-300" />
+                  <div className="absolute left-0 top-0 bottom-0 w-0 bg-[var(--accent-pop)] group-hover:w-0.5 transition-all duration-300" />
+                  <p className="font-display text-[clamp(2.6rem,5vw,4.5rem)] font-bold text-[var(--ink)] leading-none tracking-tight group-hover:text-[var(--accent)] transition-colors duration-300">
                     {stat.value}
                   </p>
-                  <p className="font-mono text-[11px] text-(--ink-muted) uppercase tracking-widest mt-2 whitespace-pre-line">
+                  <p className="font-mono text-[11px] text-[var(--ink-muted)] uppercase tracking-widest mt-2 whitespace-pre-line">
                     {stat.label}
                   </p>
                 </div>

@@ -8,9 +8,9 @@ export default function Badge({ label, variant = "default", pulse = false }: Bad
   const base = "inline-flex items-center gap-1.5 px-2.5 py-1 text-xs font-mono rounded-sm border"
 
   const variants = {
-    available: "border-(--accent-pop) text-(--accent-pop) bg-transparent",
-    type: "border-(--border) text-(--ink-muted) bg-transparent",
-    default: "border-(--border) text-(--ink-muted) bg-transparent",
+    available: "border-[var(--accent-pop)] text-[var(--accent-pop)] bg-transparent",
+    type: "border-[var(--border)] text-[var(--ink-muted)] bg-transparent",
+    default: "border-[var(--border)] text-[var(--ink-muted)] bg-transparent",
   }
 
   return (

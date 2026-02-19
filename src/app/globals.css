@@ -5,11 +5,11 @@
 /* ─── Design Tokens ────────────────────────────────────────── */
 :root {
   --bg:         #F5F4F0;
-  --surface:    #ECEAE4;
+  --surface:    #DEDAD3;   /* cards — clearly distinct from bg */
   --ink:        #373731;
   --ink-muted:  #6B6B66;
   --accent:     #2E4057;
-  --accent-pop: #C8A96E;
+  --accent-pop: #d4ae68;
   --border:     #8A8780;
 
   /* Depth layers */

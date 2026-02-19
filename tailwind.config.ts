@@ -7,7 +7,11 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        "300": "75rem", // 1200px — matches intended max-w-300 from v4
+      },
+    },
   },
   plugins: [],
 }

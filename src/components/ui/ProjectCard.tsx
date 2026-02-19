@@ -12,19 +12,19 @@ export default function ProjectCard({ project, variant = "standard" }: ProjectCa
 
   return (
     <article
-      className={`project-card group relative flex flex-col bg-(--surface) border border-(--border) transition-all duration-300 hover:-translate-y-1 overflow-hidden ${
-        isHero ? "p-8 min-h-[480px]" : isFeatured ? "p-7 min-h-[200px]" : "p-6"
+      className={`project-card group relative flex flex-col bg-[var(--surface)] border border-[var(--border)] transition-all duration-300 hover:-translate-y-1 overflow-hidden h-full ${
+        isHero ? "p-8 min-h-[460px]" : isFeatured ? "p-7 min-h-[220px]" : "p-6"
       }`}
       style={{
         boxShadow: "0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px 0 rgba(0,0,0,0.04)",
       }}
     >
       {/* Accent left border — slides in on hover */}
-      <span className="absolute left-0 top-0 bottom-0 w-0 bg-(--accent) transition-all duration-300 group-hover:w-1" />
+      <span className="absolute left-0 top-0 bottom-0 w-0 bg-[var(--accent)] transition-all duration-300 group-hover:w-1" />
 
       {/* Hero variant: decorative background number */}
       {isHero && (
-        <span className="absolute bottom-6 right-6 font-display text-[8rem] font-bold leading-none text-(--ink) opacity-[0.04] select-none pointer-events-none">
+        <span className="absolute bottom-6 right-6 font-display text-[8rem] font-bold leading-none text-[var(--ink)] opacity-[0.04] select-none pointer-events-none">
           01
         </span>
       )}
@@ -42,21 +42,16 @@ export default function ProjectCard({ project, variant = "standard" }: ProjectCa
       <div className="relative z-10 flex flex-col h-full">
         <div className="flex items-start justify-between gap-4 mb-4">
           <div>
-            <span className="text-[10px] font-mono text-(--accent-pop) uppercase tracking-widest mb-2 block">
+            <span className="text-[10px] font-mono text-[var(--accent-pop)] uppercase tracking-widest mb-2 block">
               {project.category}
             </span>
             <h3
-              className={`font-display text-(--ink) font-semibold leading-tight ${
+              className={`font-display text-[var(--ink)] font-semibold leading-tight ${
                 isHero ? "text-2xl md:text-3xl" : isFeatured ? "text-lg" : "text-base"
               }`}
             >
               {project.title}
             </h3>
-            {project.role && (
-              <span className="text-[11px] font-mono text-(--ink-muted) mt-1 block">
-                {project.role}
-              </span>
-            )}
           </div>
 
           <div className="flex items-center gap-2 shrink-0 mt-1">
@@ -65,7 +60,7 @@ export default function ProjectCard({ project, variant = "standard" }: ProjectCa
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-(--ink-muted) hover:text-(--accent) transition-colors"
+                className="text-[var(--ink-muted)] hover:text-[var(--accent)] transition-colors"
                 aria-label={`${project.title} GitHub`}
               >
                 <Github size={15} />
@@ -76,7 +71,7 @@ export default function ProjectCard({ project, variant = "standard" }: ProjectCa
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-(--ink-muted) hover:text-(--accent) transition-colors"
+                className="text-[var(--ink-muted)] hover:text-[var(--accent)] transition-colors"
                 aria-label={`${project.title} live link`}
               >
                 <ExternalLink size={15} />
@@ -86,7 +81,7 @@ export default function ProjectCard({ project, variant = "standard" }: ProjectCa
         </div>
 
         <p
-          className={`text-(--ink-muted) leading-relaxed mb-5 font-mono ${
+          className={`text-[var(--ink-muted)] leading-relaxed mb-5 font-mono ${
             isHero ? "text-sm max-w-xs" : isFeatured ? "text-sm" : "text-xs"
           }`}
         >
@@ -98,7 +93,7 @@ export default function ProjectCard({ project, variant = "standard" }: ProjectCa
             {project.stack.map((tech) => (
               <span
                 key={tech}
-                className="text-[10px] font-mono px-2 py-0.5 border border-(--border) text-(--ink-muted) bg-(--bg)"
+                className="text-[10px] font-mono px-2 py-0.5 border border-[var(--border)] text-[var(--ink-muted)] bg-[var(--bg)]"
               >
                 {tech}
               </span>
@@ -106,7 +101,7 @@ export default function ProjectCard({ project, variant = "standard" }: ProjectCa
           </div>
 
           {isHero && (
-            <span className="shrink-0 text-(--ink-muted) group-hover:text-(--accent) group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200">
+            <span className="shrink-0 text-[var(--ink-muted)] group-hover:text-[var(--accent)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200">
               <ArrowUpRight size={18} />
             </span>
           )}

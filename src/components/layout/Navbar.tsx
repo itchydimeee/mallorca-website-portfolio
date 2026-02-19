@@ -56,7 +56,7 @@ export default function Navbar() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "border-b border-(--border) bg-(--bg) backdrop-blur-md"
+            ? "border-b border-[var(--border)] bg-[var(--bg)] backdrop-blur-md"
             : "bg-transparent"
         }`}
       >
@@ -65,7 +65,7 @@ export default function Navbar() {
           <a
             href="#home"
             onClick={(e) => { e.preventDefault(); handleNav("#home") }}
-            className="font-display text-(--ink) text-lg font-semibold tracking-tight hover:text-(--accent) transition-colors"
+            className="font-display text-[var(--ink)] text-lg font-semibold tracking-tight hover:text-[var(--accent)] transition-colors"
           >
             ZRGM.
           </a>
@@ -81,8 +81,8 @@ export default function Navbar() {
                   onClick={(e) => { e.preventDefault(); handleNav(item.href) }}
                   className={`text-[11px] font-mono uppercase tracking-widest transition-colors ${
                     activeSection === id
-                      ? "text-(--accent)"
-                      : "text-(--ink-muted) hover:text-(--ink)"
+                      ? "text-[var(--accent)]"
+                      : "text-[var(--ink-muted)] hover:text-[var(--ink)]"
                   }`}
                 >
                   {item.label}
@@ -92,7 +92,7 @@ export default function Navbar() {
             <a
               href="/Zyd_Reic_Mallorca_Resume.pdf"
               download
-              className="flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-widest px-3 py-1.5 border border-(--accent) text-(--accent) hover:bg-(--accent) hover:text-white transition-all duration-200"
+              className="flex items-center gap-1.5 text-[11px] font-mono uppercase tracking-widest px-3 py-1.5 border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white transition-all duration-200"
             >
               <FileDown size={12} />
               Resume
@@ -102,7 +102,7 @@ export default function Navbar() {
 
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-(--ink) p-1"
+            className="md:hidden text-[var(--ink)] p-1"
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle menu"
           >
@@ -113,7 +113,7 @@ export default function Navbar() {
 
       {/* Mobile overlay */}
       <div
-        className={`fixed inset-0 z-40 bg-(--bg) flex flex-col justify-center px-8 transition-all duration-300 md:hidden ${
+        className={`fixed inset-0 z-40 bg-[var(--bg)] flex flex-col justify-center px-8 transition-all duration-300 md:hidden ${
           menuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -126,7 +126,7 @@ export default function Navbar() {
               key={item.href}
               href={item.href}
               onClick={(e) => { e.preventDefault(); handleNav(item.href) }}
-              className="font-display text-4xl text-(--ink) hover:text-(--accent) transition-colors"
+              className="font-display text-4xl text-[var(--ink)] hover:text-[var(--accent)] transition-colors"
               style={{
                 transitionDelay: menuOpen ? `${i * 60}ms` : "0ms",
                 transform: menuOpen ? "translateX(0)" : "translateX(-20px)",
@@ -140,14 +140,14 @@ export default function Navbar() {
           <a
             href="/Zyd_Reic_Mallorca_Resume.pdf"
             download
-            className="flex items-center gap-2 text-sm font-mono text-(--ink-muted) mt-4 hover:text-(--accent) transition-colors"
+            className="flex items-center gap-2 text-sm font-mono text-[var(--ink-muted)] mt-4 hover:text-[var(--accent)] transition-colors"
           >
             <FileDown size={14} />
             Download Resume
           </a>
         </nav>
 
-        <p className="absolute bottom-10 left-8 text-xs font-mono text-(--ink-muted)">
+        <p className="absolute bottom-10 left-8 text-xs font-mono text-[var(--ink-muted)]">
           {profile.location}
         </p>
       </div>
