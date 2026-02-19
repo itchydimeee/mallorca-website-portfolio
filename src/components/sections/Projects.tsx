@@ -58,68 +58,14 @@ export default function Projects() {
           </div>
         </SectionReveal>
 
-        {/* Featured bento grid — hero left (row-span-2), 2 stacked right, 4th full-width below */}
+        {/* Featured projects — 2x2 grid */}
         {featured.length > 0 && (
-          <div className="mb-4">
-            {/* Main bento: hero left, 2 stacked right */}
-            <div className="flex flex-col md:flex-row gap-4 mb-4">
-              {/* Hero card — left, takes full height */}
-              {featured[0] && (
-                <div className="md:w-1/2 flex flex-col">
-                  <SectionReveal className="flex-1 flex flex-col">
-                    <ProjectCard project={featured[0]} variant="hero" />
-                  </SectionReveal>
-                </div>
-              )}
-              {/* Right column — two equal cards stacked */}
-              <div className="md:w-1/2 flex flex-col gap-4">
-                {featured[1] && (
-                  <SectionReveal className="flex-1 flex flex-col" delay={100}>
-                    <ProjectCard project={featured[1]} variant="featured" />
-                  </SectionReveal>
-                )}
-                {featured[2] && (
-                  <SectionReveal className="flex-1 flex flex-col" delay={200}>
-                    <ProjectCard project={featured[2]} variant="featured" />
-                  </SectionReveal>
-                )}
-              </div>
-            </div>
-
-            {/* 4th featured slot — full-width accent row */}
-            {featured[3] && (
-              <SectionReveal>
-                <div className="relative overflow-hidden border border-[var(--border)] bg-[var(--surface)] p-7 flex flex-col md:flex-row md:items-center gap-6 group hover:-translate-y-1 transition-all duration-300"
-                  style={{ boxShadow: "0 1px 3px 0 rgba(0,0,0,0.06)" }}
-                >
-                  <span className="absolute left-0 top-0 bottom-0 w-0 bg-[var(--accent-pop)] transition-all duration-300 group-hover:w-1" />
-                  <div className="absolute inset-0 pointer-events-none opacity-[0.025]"
-                    style={{
-                      backgroundImage: "linear-gradient(var(--ink) 1px, transparent 1px), linear-gradient(90deg, var(--ink) 1px, transparent 1px)",
-                      backgroundSize: "24px 24px",
-                    }}
-                  />
-                  <div className="relative z-10 flex-1">
-                    <span className="text-[10px] font-mono text-[var(--accent-pop)] uppercase tracking-widest mb-2 block">
-                      {featured[3].category} · Featured
-                    </span>
-                    <h3 className="font-display text-xl text-[var(--ink)] font-semibold mb-2">
-                      {featured[3].title}
-                    </h3>
-                    <p className="font-mono text-sm text-[var(--ink-muted)] leading-relaxed">
-                      {featured[3].description}
-                    </p>
-                  </div>
-                  <div className="relative z-10 flex flex-wrap gap-1.5 md:max-w-[240px]">
-                    {featured[3].stack.map((tech) => (
-                      <span key={tech} className="text-[10px] font-mono px-2 py-0.5 border border-[var(--border)] text-[var(--ink-muted)] bg-[var(--bg)]">
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-                </div>
+          <div className="grid sm:grid-cols-2 gap-4 mb-4">
+            {featured.map((p, i) => (
+              <SectionReveal key={p.slug} className="flex flex-col" delay={i * 100}>
+                <ProjectCard project={p} variant="featured" />
               </SectionReveal>
-            )}
+            ))}
           </div>
         )}
 

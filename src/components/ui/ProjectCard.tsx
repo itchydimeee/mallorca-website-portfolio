@@ -1,14 +1,17 @@
-import { ExternalLink, Github, ArrowUpRight } from "lucide-react"
-import { Project } from "@/data/projects"
+import { ExternalLink, Github, ArrowUpRight } from "lucide-react";
+import { Project } from "@/data/projects";
 
 interface ProjectCardProps {
-  project: Project
-  variant?: "hero" | "featured" | "standard"
+  project: Project;
+  variant?: "hero" | "featured" | "standard";
 }
 
-export default function ProjectCard({ project, variant = "standard" }: ProjectCardProps) {
-  const isHero = variant === "hero"
-  const isFeatured = variant === "featured" || isHero
+export default function ProjectCard({
+  project,
+  variant = "standard",
+}: ProjectCardProps) {
+  const isHero = variant === "hero";
+  const isFeatured = variant === "featured" || isHero;
 
   return (
     <article
@@ -47,7 +50,11 @@ export default function ProjectCard({ project, variant = "standard" }: ProjectCa
             </span>
             <h3
               className={`font-display text-[var(--ink)] font-semibold leading-tight ${
-                isHero ? "text-2xl md:text-3xl" : isFeatured ? "text-lg" : "text-base"
+                isHero
+                  ? "text-2xl md:text-3xl"
+                  : isFeatured
+                    ? "text-lg"
+                    : "text-base"
               }`}
             >
               {project.title}
@@ -81,12 +88,33 @@ export default function ProjectCard({ project, variant = "standard" }: ProjectCa
         </div>
 
         <p
-          className={`text-[var(--ink-muted)] leading-relaxed mb-5 font-mono ${
+          className={`text-[var(--ink-muted)] leading-relaxed mb-4 font-mono ${
             isHero ? "text-sm max-w-xs" : isFeatured ? "text-sm" : "text-xs"
           }`}
         >
           {project.description}
         </p>
+
+        {/* Role & Client */}
+        {(project.role || project.client) && (
+          <>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 mb-4">
+              {project.role && (
+                <span className="text-[10px] font-mono text-[var(--accent)] uppercase tracking-widest">
+                  {project.role}
+                </span>
+              )}
+            </div>
+            <div className="flex flex-wrap gap-x-4 gap-y-1 mb-4">
+              {project.client && (
+                <span className="text-[10px] font-mono text-[var(--ink-muted)] uppercase tracking-widest">
+                  Client:{" "}
+                  <span className="text-[var(--ink)]">{project.client}</span>
+                </span>
+              )}
+            </div>
+          </>
+        )}
 
         <div className="mt-auto flex items-end justify-between gap-3">
           <div className="flex flex-wrap gap-1.5">
@@ -108,5 +136,5 @@ export default function ProjectCard({ project, variant = "standard" }: ProjectCa
         </div>
       </div>
     </article>
-  )
+  );
 }
