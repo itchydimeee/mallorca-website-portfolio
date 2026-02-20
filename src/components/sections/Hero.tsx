@@ -125,7 +125,7 @@ export default function Hero() {
               )}
               <div className="flex items-center gap-3 ml-auto">
                 <a
-                  href={profile.github}
+                  href="https://github.com/itchydimeee"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[var(--ink-muted)] hover:text-[var(--accent)] transition-colors"
@@ -135,7 +135,7 @@ export default function Hero() {
                 </a>
                 <div className="w-px h-4 bg-[var(--border)]" />
                 <a
-                  href={profile.linkedin}
+                  href="https://www.linkedin.com/in/zyd-reic-mallorca-377452335/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[var(--ink-muted)] hover:text-[var(--accent)] transition-colors"

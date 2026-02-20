@@ -38,7 +38,7 @@ export default function Contact() {
         <SectionReveal delay={400}>
           <div className="flex items-center justify-center gap-6">
             <a
-              href={profile.github}
+              href="https://github.com/itchydimeee"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 font-mono text-xs text-[var(--ink-muted)] hover:text-[var(--accent)] transition-colors border border-[var(--border)] px-4 py-2.5 hover:border-[var(--accent)]"
@@ -47,7 +47,7 @@ export default function Contact() {
               GitHub
             </a>
             <a
-              href={profile.linkedin}
+              href="https://www.linkedin.com/in/zyd-reic-mallorca-377452335/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 font-mono text-xs text-[var(--ink-muted)] hover:text-[var(--accent)] transition-colors border border-[var(--border)] px-4 py-2.5 hover:border-[var(--accent)]"
