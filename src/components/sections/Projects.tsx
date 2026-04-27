@@ -21,9 +21,6 @@ export default function Projects() {
     return projects.filter((p) => p.category === active)
   }, [active])
 
-  const featured = filtered.filter((p) => p.featured)
-  const rest = filtered.filter((p) => !p.featured)
-
   return (
     <section id="projects" className="py-28 bg-[var(--surface)]">
       <div className="max-w-300 mx-auto px-6 md:px-10">
@@ -57,40 +54,15 @@ export default function Projects() {
           </div>
         </SectionReveal>
 
-        {/* Featured projects — 2x2 grid */}
-        {featured.length > 0 && (
-          <div className="grid sm:grid-cols-2 gap-4 mb-4">
-            {featured.map((p, i) => (
-              <SectionReveal key={p.slug} className="flex flex-col" delay={i * 100}>
+        {filtered.length > 0 ? (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {filtered.map((p, i) => (
+              <SectionReveal key={p.slug} className="flex flex-col" delay={i * 80}>
                 <ProjectCard project={p} variant="featured" />
               </SectionReveal>
             ))}
           </div>
-        )}
-
-        {/* Rest grid */}
-        {rest.length > 0 && (
-          <>
-            {featured.length > 0 && (
-              <div className="my-8 flex items-center gap-4">
-                <div className="flex-1 h-px bg-[var(--border)]" />
-                <span className="text-[11px] font-mono text-[var(--ink-muted)] uppercase tracking-widest">
-                  More Projects
-                </span>
-                <div className="flex-1 h-px bg-[var(--border)]" />
-              </div>
-            )}
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {rest.map((p) => (
-                <SectionReveal key={p.slug}>
-                  <ProjectCard project={p} />
-                </SectionReveal>
-              ))}
-            </div>
-          </>
-        )}
-
-        {filtered.length === 0 && (
+        ) : (
           <div className="text-center py-20 font-mono text-sm text-[var(--ink-muted)]">
             No projects in this category yet.
           </div>

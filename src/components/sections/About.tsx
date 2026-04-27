@@ -29,7 +29,7 @@ export default function About() {
             <SectionReveal delay={200}>
               <div className="space-y-4 font-mono text-sm text-[var(--ink-muted)] leading-loose max-w-lg">
                 <p>
-                  I am a frontend software engineer from Iloilo City, Philippines,
+                  I am a full-stack software engineer from Iloilo City, Philippines,
                   passionate about crafting web interfaces that are both visually precise
                   and deeply functional. I care about the details — layout, motion,
                   accessibility, and performance.

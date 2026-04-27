@@ -18,17 +18,17 @@ const dmMono = DM_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Zyd Reic G. Mallorca — Frontend Software Engineer",
+  title: "Zyd Reic G. Mallorca — Full-Stack Software Engineer",
   description:
-    "Portfolio of Zyd Reic G. Mallorca, a frontend software engineer from Iloilo City, Philippines specializing in React and Next.js.",
+    "Portfolio of Zyd Reic G. Mallorca, a full-stack software engineer from Iloilo City, Philippines specializing in React and Next.js.",
   openGraph: {
     title: "Zyd Reic G. Mallorca",
-    description: "Frontend Software Engineer · React · Next.js · TypeScript",
-    url: "https://yoursite.com",
+    description: "Full-Stack Software Engineer · React · Next.js · TypeScript",
+    url: "https://zyd-reic-mallorca-portfolio.vercel.app/",
     type: "website",
   },
   keywords: [
-    "frontend developer",
+    "full-stack developer",
     "React",
     "Next.js",
     "TypeScript",

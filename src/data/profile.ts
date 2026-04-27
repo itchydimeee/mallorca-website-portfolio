@@ -1,6 +1,6 @@
 export const profile = {
   name: "Zyd Reic G. Mallorca",
-  title: "Frontend Software Engineer",
+  title: "Full-Stack Software Engineer",
   tagline: "I build interfaces that are as thoughtful as they are functional.",
   location: "Iloilo City, Philippines",
   email: "zydreic.mallorca07@gmail.com",

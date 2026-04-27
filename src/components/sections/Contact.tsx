@@ -19,7 +19,7 @@ export default function Contact() {
 
         <SectionReveal delay={200}>
           <p className="font-mono text-sm text-[var(--ink-muted)] max-w-md mx-auto mb-12 leading-loose">
-            I am currently open to frontend roles, internships, and freelance projects.
+            I am currently open to full-stack roles, internships, and freelance projects.
             Reach out — let&apos;s talk.
           </p>
         </SectionReveal>
