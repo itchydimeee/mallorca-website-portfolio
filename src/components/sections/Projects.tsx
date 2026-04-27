@@ -5,13 +5,12 @@ import SectionReveal from "@/components/ui/SectionReveal"
 import ProjectCard from "@/components/ui/ProjectCard"
 import { projects } from "@/data/projects"
 
-type Filter = "all" | "web" | "mobile" | "fullstack"
+type Filter = "all" | "web" | "mobile"
 
 const filters: { label: string; value: Filter }[] = [
   { label: "All", value: "all" },
   { label: "Web", value: "web" },
   { label: "Mobile", value: "mobile" },
-  { label: "Full Stack", value: "fullstack" },
 ]
 
 export default function Projects() {

@@ -9,7 +9,7 @@ export type Project = {
   link?: string
   github?: string
   featured: boolean
-  category: "web" | "mobile" | "fullstack"
+  category: "web" | "mobile"
 }
 
 export const projects: Project[] = [
@@ -18,12 +18,12 @@ export const projects: Project[] = [
     title: "Baylo Central",
     description:
       "Co-founded and led the development of an online enterprise platform enabling Philippine MSMEs to manage listings, operations, and business workflows.",
-    stack: ["Next.js", "Node.js", "PostgreSQL"],
+    stack: ["Next.js", "Node.js", "PostgreSQL", "Supabase", "Prisma"],
     role: "Startup Co-Founder, Lead Project Manager & Full Stack Developer",
     featured: true,
-    category: "fullstack",
+    category: "web",
   },
-    {
+  {
     slug: "civiq",
     title: "Civiq",
     description:
@@ -38,11 +38,21 @@ export const projects: Project[] = [
     title: "Falsisters POS",
     description:
       "Engineered a backoffice web dashboard for a Point-of-Sale system, supporting sales monitoring and inventory management.",
-    stack: ["React", "Express.js", "PostgreSQL"],
+    stack: ["Next.js", "NestJS", "PostgreSQL", "Prisma", "Supabase"],
     role: "Full Stack Web Developer",
     client: "Falsisters Rice Store",
     featured: true,
-    category: "fullstack",
+    category: "web",
+  },
+  {
+    slug: "mercenary",
+    title: "Mercenary - Website and Admin",
+    description:
+      "A full-stack web platform for a clothing brand, featuring a product catalog and admin dashboard for managing listings, with integrated messaging-based order inquiries.",
+    stack: ["Next.js", "PostgreSQL", "Supabase", "Prisma"],
+    role: "Full Stack Developer",
+    featured: true,
+    category: "web",
   },
   {
     slug: "habol",
@@ -60,7 +70,7 @@ export const projects: Project[] = [
     title: "FlexiPlanner",
     description:
       "Developed a flexible task planning tool designed to adapt to different productivity styles and workflows.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS"],
+    stack: ["React", "Express", "PostgreSQL", "Prisma"],
     role: "Full Stack Developer",
     featured: false,
     category: "web",
@@ -80,7 +90,7 @@ export const projects: Project[] = [
     title: "Gump (Internship)",
     description:
       "Assisted in building the Help Center page and resolved localization and translation issues for a Hong Kong-based platform.",
-    stack: ["React", "TypeScript", "i18n"],
+    stack: ["React", "TypeScript", "SCSS"],
     role: "Frontend Developer (Intern)",
     featured: false,
     category: "web",
