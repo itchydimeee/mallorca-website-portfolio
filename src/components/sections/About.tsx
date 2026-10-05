@@ -3,7 +3,7 @@ import { education } from "@/data/education"
 
 const stats = [
   { value: "3+", label: "Years\nLearning" },
-  { value: "6+", label: "Projects\nBuilt" },
+  { value: "10+", label: "Projects\nBuilt" },
   { value: "10+", label: "Technologies\nUsed" },
 ]
 

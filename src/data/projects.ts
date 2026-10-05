@@ -8,7 +8,7 @@ export type Project = {
   client?: string
   link?: string
   github?: string
-  category: "web" | "mobile"
+  category: "web" | "mobile" | "iot"
 }
 
 export const projects: Project[] = [
@@ -28,7 +28,7 @@ export const projects: Project[] = [
       "Contributed to building a web app that monitors IoT-enabled smart trash bins, tracking fill levels, status, and real-time location via motion sensors.",
     stack: ["Next.js", "TypeScript", "Tailwind CSS"],
     role: "Frontend Developer",
-    category: "web",
+    category: "iot",
   },
   {
     slug: "falsisters-pos",
@@ -95,5 +95,23 @@ export const projects: Project[] = [
     stack: ["React", "TypeScript", "SCSS"],
     role: "Frontend Developer (Intern)",
     category: "web",
+  },
+  {
+    slug: "devsim",
+    title: "DevSim",
+    description:
+      "A gamified web platform where aspiring developers practice full-stack integration through real-world scenarios, an in-browser coding workspace, and AI-guided hints.",
+    stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "OpenAI"],
+    role: "Full Stack Developer",
+    category: "web",
+  },
+  {
+    slug: "safe-parcel",
+    title: "SafeParcel",
+    description:
+      "Built the website and ESP32 (Arduino) firmware for a smart parcel box, connecting a keypad, LCD, and servo lock to the web server over secure HTTPS.",
+    stack: ["ESP32", "Arduino (C++)", "Node.js", "HTTPS"],
+    role: "Full Stack & Firmware Developer",
+    category: "iot",
   },
 ]
