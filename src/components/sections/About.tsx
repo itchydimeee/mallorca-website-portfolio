@@ -2,7 +2,7 @@ import SectionReveal from "@/components/ui/SectionReveal"
 import { education } from "@/data/education"
 
 const stats = [
-  { value: "3+", label: "Years\nLearning" },
+  { value: "4+", label: "Years\nBuilding" },
   { value: "10+", label: "Projects\nBuilt" },
   { value: "10+", label: "Technologies\nUsed" },
 ]
